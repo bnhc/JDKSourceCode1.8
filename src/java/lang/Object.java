@@ -4,7 +4,7 @@ package java.lang;
 public class Object {
 
     /**
-     * 一个本地方法,具体是用C(C++)在DLL中实现的,然后通过JNI调用
+     * 一个本地方法,具体是用C(C++)在DLL中实现的,然后通过JNI调用(Android通用)
      */
     private static native void registerNatives();
 
