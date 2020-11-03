@@ -38,6 +38,9 @@ import java.util.*;
  * interface can be used as keys in a {@linkplain SortedMap sorted map} or as
  * elements in a {@linkplain SortedSet sorted set}, without the need to
  * specify a {@linkplain Comparator comparator}.<p>
+ * 
+ *这里提到的 Lists(arrays)如果实现Comparable接口,可以使用 Collections.sort(List)
+ *Arrays.sort(Object[])...等实现排序
  *
  * The natural ordering for a class <tt>C</tt> is said to be <i>consistent
  * with equals</i> if and only if <tt>e1.compareTo(e2) == 0</tt> has
@@ -87,6 +90,8 @@ import java.util.*;
  * <a href="{@docRoot}/../technotes/guides/collections/index.html">
  * Java Collections Framework</a>.
  *
+ *Comparable接口属于Java集合框架成员 
+ *
  * @param <T> the type of objects that this object may be compared to
  *
  * @author  Josh Bloch
@@ -132,6 +137,11 @@ public interface Comparable<T> {
      * @throws NullPointerException if the specified object is null
      * @throws ClassCastException if the specified object's type prevents it
      *         from being compared to this object.
+     * 这里需要关注的就是int返回值大小
+     * 
+     *  a nagative integer: less than
+     *  zero              : equal
+     *  a positive integer : greater than the specified object
      */
     public int compareTo(T o);
 }
