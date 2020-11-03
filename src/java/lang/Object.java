@@ -51,6 +51,10 @@ public class Object {
         return getClass().getName() + "@" + Integer.toHexString(hashCode());
     }
 
+    //wait(long timeout) wait(lang timeout,int nanos) wait() 均属于Object的方法。在线程调用中，如果对象调用wait方法，会使当前线程进入等待状态 注意：wait(0)如果时间是0，必须进行notify()/notifyAll()调用
+    //notify() notifyAll() 用于唤醒因为 该对象调用wait方法而进入等待状态的线程。
+    
+    
     /**
      * 不能被重写，用于唤醒一个在因等待该对象（调用了wait方法）被处于等待状态（waiting 或 time_wait）的线程，该方法只能同步方法或同步块中调用
      */
