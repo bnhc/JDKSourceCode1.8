@@ -28,6 +28,7 @@ public final class Integer extends Number implements Comparable<Integer> {
     /**
      * A constant holding the minimum value an {@code int} can
      * have, -2<sup>31</sup>.
+     * 8个16进制
      */
     @Native public static final int   MIN_VALUE = 0x80000000;
 
@@ -42,6 +43,8 @@ public final class Integer extends Number implements Comparable<Integer> {
      * {@code int}.
      *
      * @since   JDK1.1
+     * Class.getPrimitiveClass("int")--------------> Return the Virtual Machine's Class object for the named primitive type
+     * 通过Class静态方法 通过name获取虚拟机的原始类对象
      */
     @SuppressWarnings("unchecked")
     public static final Class<Integer>  TYPE = (Class<Integer>) Class.getPrimitiveClass("int");
@@ -99,12 +102,12 @@ public final class Integer extends Number implements Comparable<Integer> {
      * @param   i       an integer to be converted to a string.
      * @param   radix   the radix to use in the string representation.
      * @return  a string representation of the argument in the specified radix.
-     * @see     java.lang.Character#MAX_RADIX
-     * @see     java.lang.Character#MIN_RADIX
+     * @see     java.lang.Character#MAX_RADIX     public static final int MIN_RADIX = 2;
+     * @see     java.lang.Character#MIN_RADIX     public static final int MAX_RADIX = 36;
      */
     public static String toString(int i, int radix) {
         if (radix < Character.MIN_RADIX || radix > Character.MAX_RADIX)
-            radix = 10;
+            radix = 10;//这里默认显示10禁止,所以要是显示为10进制时直接传入0/1/>36即可
 
         /* Use the faster version */
         if (radix == 10) {
