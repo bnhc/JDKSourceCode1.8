@@ -30,6 +30,8 @@ package java.lang;
  * classes representing numeric values that are convertible to the
  * primitive types {@code byte}, {@code double}, {@code float}, {@code
  * int}, {@code long}, and {@code short}.
+ * ##byte/double/float/int/long/short 超类-------abstract class Number
+ * ##Number默认实现了序列化接口,这就是为什么基本数据类型不需要序列化的原因！！
  *
  * The specific semantics of the conversion from the numeric value of
  * a particular {@code Number} implementation to a given primitive
