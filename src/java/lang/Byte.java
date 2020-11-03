@@ -46,6 +46,7 @@ public final class Byte extends Number implements Comparable<Byte> {
     /**
      * A constant holding the minimum value a {@code byte} can
      * have, -2<sup>7</sup>.
+     *  Byte的最大/最小 -128 ----------- 127 范围
      */
     public static final byte   MIN_VALUE = -128;
 
